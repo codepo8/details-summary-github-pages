@@ -17,9 +17,8 @@ This should show as a code block
 This should show as a collapsible section with a code block
 
 <!-- details -->
-<!-- summary -->
-## Hidden section
-<!-- end:summary -->
+<!-- summary -->## Solution explanation<!-- end:summary -->
+
 ```html
 <details>
     <summary>Section</summary>
