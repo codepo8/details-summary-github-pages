@@ -3,6 +3,9 @@ title: detail/summary/colourcode demopage
 layout: details.html
 ---
 
+# Demopage
+
+This should show as a code block
 
 ```html
 <details open>
@@ -11,9 +14,11 @@ layout: details.html
 </details>
 ```
 
+This should show as a collapsible section with a code block
+
 <!-- details -->
 <!-- summary -->
-
+## Hidden section
 <!-- end:summary -->
 ```html
 <details>
