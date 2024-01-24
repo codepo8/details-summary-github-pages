@@ -1,6 +1,6 @@
 ---
 title: detail/summary/colourcode demopage 
-layout: details.html
+layout: details
 ---
 
 # Demopage
