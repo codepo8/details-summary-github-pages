@@ -14,3 +14,7 @@ h1 {
   font-weight: normal;
   color: var(--h1colour);
 }
+
+summary h2 {
+  display: inline;
+}
