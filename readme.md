@@ -6,7 +6,7 @@ As [CODE100](https://code100.dev) is coming to Amsterdam, we needed an archive o
 
 * I wanted to have collapsible and expandable parts of the page. I did not want to write an own JavaScript solution for that.
 
-Here is how to achieve both. You can check the [CODE100 puzzle archive](https://puzzzles.code100.dev) to see this in action. 
+Here is how to achieve both. You can check the [CODE100 puzzle archive](https://puzzles.code100.dev/) to see this in action. 
 
 ## Adding source code colour coding to GitHub pages
 
@@ -38,6 +38,7 @@ HTML comments are great because they don't do anything in GitHub markdown. There
 The `detail-summary.html` include is as simple as it gets:
 
 ```liquid
+{% raw %}
 {% capture summary %}<!-- summary -->{% endcapture%}
 {% capture details %}<!-- details -->{% endcapture%}
 {% capture endsummary %}<!-- endsummary -->{% endcapture%}
@@ -50,12 +51,15 @@ The `detail-summary.html` include is as simple as it gets:
 %}
 
 {{ newhtml }}
+{% endraw %}
 ```
 
 In my page template I need to use this as a pre-render instead of simply using `{{ content }}`:
 
 ```liquid
+{% raw %}
 {% include detail-summary.html html=content %}
+{% endraw %}
 ```
 
 And in my markdown files I use HTML comments:
@@ -85,6 +89,12 @@ Did you get it? Did you find a better way?
 <!-- enddetails -->
 ```
 
-This renders as a collapsed section with `Solution` as the summary. The nice thing here is that it enhances progressively.  In the GitHub rendered readme it is just a headline.
+This [renders as a collapsed section](https://codepo8.github.io/details-summary-github-pages/demopage) with `Solution` as the summary.
+
+![Demopage in the browser](rendered.gif)
+
+The nice thing here is that it enhances progressively.  In the GitHub rendered readme it is just a headline.
+
+![Github rendered markdown of the file](github-render.png)
 
 If you want to play with this, I created a bare-bones version here. 
