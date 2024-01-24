@@ -38,8 +38,7 @@ HTML comments are great because they don't do anything in GitHub markdown. There
 The `detail-summary.html` include is as simple as it gets:
 
 ```liquid
-{% raw %}
-{% capture summary %}<!-- summary -->{% endcapture%}
+{% raw %}{% capture summary %}<!-- summary -->{% endcapture%}
 {% capture details %}<!-- details -->{% endcapture%}
 {% capture endsummary %}<!-- endsummary -->{% endcapture%}
 {% capture enddetails %}<!-- enddetails -->{% endcapture%}
@@ -50,16 +49,13 @@ The `detail-summary.html` include is as simple as it gets:
  replace: enddetails, '</details>'
 %}
 
-{{ newhtml }}
-{% endraw %}
+{{ newhtml }}{% endraw %}
 ```
 
-In my page template I need to use this as a pre-render instead of simply using `{{ content }}`:
+In my page template I need to use this as a pre-render instead of simply using `{% raw %}{{ content }}{% endraw %}`:
 
 ```liquid
-{% raw %}
-{% include detail-summary.html html=content %}
-{% endraw %}
+{% raw %}{% include detail-summary.html html=content %}{% endraw %}
 ```
 
 And in my markdown files I use HTML comments:
