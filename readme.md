@@ -1,0 +1,1 @@
+# Using details/summary in GitHub pages
