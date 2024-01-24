@@ -93,4 +93,4 @@ The nice thing here is that it enhances progressively.  In the GitHub rendered r
 
 ![Github rendered markdown of the file](github-render.png)
 
-If you want to play with this, I created a bare-bones version here. 
+If you want to play with this, I created a [bare-bones version here](https://github.com/codepo8/details-summary-github-pages/). 
