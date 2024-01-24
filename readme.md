@@ -25,7 +25,11 @@ The new(ish) HTML elements detail and summary result in collapsible document sec
 
 GitHub allows to use summary and detail as HTML inside their flavour of markdown. If you check the [notworking.md](notworking.md) file in the source repo, you can see it working.
 
-However, if you render it as GitHub Pages the content inside the `details` stays markdown and doesn't get rendered (even when you add newlines). 
+![Collapsing and expanding in markdown on GitHub](markdown-details.gif) 
+
+However, if [you render it as GitHub Pages](https://codepo8.github.io/details-summary-github-pages/notworking) the content inside the `details` stays markdown and doesn't get rendered (even when you add newlines). You can of course use HTML (as the second demo shows), but this defeats the purpose of using markdown. 
+
+![Collapsing and expanding in GitHub Pages not working](rendered-detail.gif)
 
 My workaround was to use HTML comments and create an include to use in my page templates. 
 

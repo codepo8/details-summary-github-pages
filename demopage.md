@@ -19,7 +19,7 @@ This should show as a collapsible section with a code block
 <!-- details -->
 <!-- summary -->
 ## Solution explanation
-<!-- end:summary -->
+<!-- endsummary -->
 
 ```html
 <details>
@@ -27,4 +27,4 @@ This should show as a collapsible section with a code block
     <p>This is initially hidden</p>
 </details>
 ```
-<!-- end:details -->
+<!-- enddetails -->
